@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
+  <div class="logo-container" [ngClass]="{'logo-container-space-between': collapsed}">
+    <div class="roundedContainer" *ngIf="collapsed">
+      <img class="logo-img" src="assets/wipass-logo.png" alt="Logo de WiPass">
+    </div>
+    <button class="btn-close" (click)="toggleCollapse()">
+      <i class="fa fa-times"></i>
+    </button>
+  </div>
+  <div class="roundedContainer itemsMargin fotoPerfil" [ngClass]="{'fotoPerfilCollapsed': collapsed}">
+    <img [ngClass]="{'fotoPerfilCollapsed': collapsed}" src="/assets/fotoPerfil.jpg" alt="imatge de perfil">
+    <h3 class="nomUsuari">Howard Schultz</h3>
+    <span class="mailUsuari">hschultz@starbucks.es</span>
+  </div>
+  <div>
+  <ul class="sidenav-nav itemsMargin">
+    <li class="sidenav-nav-item roundedContainer"
+    [ngClass]="{'sidenav-nav-item-collapsed': collapsed, 'selected': selectedItem === 'Global View'}"
+    (click)="onItemClick('Global View')">
+  <a class="sidenav-nav-link">
+    <i class="sidenav-link-icon fa fa-home"></i>
+    <span class="sidenav-link-text" *ngIf="collapsed">Global View</span>
+  </a>
+</li>
+
+<li class="sidenav-nav-item roundedContainer" 
+    [ngClass]="{'sidenav-nav-item-collapsed': collapsed, 'selected': selectedItem === 'Analytics'}"
+    (click)="onItemClick('Analytics')">
+  <a class="sidenav-nav-link">
+    <i class="sidenav-link-icon fa fa-anchor"></i>
+    <span class="sidenav-link-text" *ngIf="collapsed">Analytics</span>
+  </a>
+</li>
+  </ul>
+</div>
+
+ 

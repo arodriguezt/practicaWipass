@@ -1,0 +1,31 @@
+.body {
+  width: calc(100vw - 13rem);
+  height: 100vh;
+  margin-left: 7rem;
+  z-index: 0;
+  position: relative;
+  top: 0;
+  transition: all 0.5s ease;
+  background: #f4f7fa;
+  padding: 3rem;
+}
+.body-trimmed {
+  width: calc(100vw - 17rem);
+  margin-left: 17rem;
+}
+.body-md-screen {
+  width: calc(100% - 5rem);
+  margin-left: 5;
+}
+
+h1{
+  text-transform: capitalize;
+}
+
+.card{
+  height: 70vh;
+  width: calc(100% - 3rem);
+  background: hsl(78 8% 90% / 1);
+  border-radius: 20px;
+  padding: 1rem;
+}
